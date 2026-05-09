@@ -1,0 +1,49 @@
+header {
+    height: 80px;
+    padding: 0 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header > .main-nav,
+header > .user-info {
+    display: flex;
+    align-items: center;
+
+}
+
+header > .main-nav > *,
+header > .user-info > * {
+    padding: 10px;
+    margin: 0 8px;
+}
+
+header > .main-nav > a > .logo-img {
+    height: 48px;
+}
+
+header > .main-nav > a > div {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+header > .user-info > a > .user-img {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+}
+
+header > .user-info > a > .logout-img,
+header > .user-info > div > .menu-img,
+header > .user-info > div > .cancel-img {
+    height: 24px;
+    cursor: pointer;
+}
+
+nav {
+    padding-left: 32px;
+}
+
+nav > * {
+    margin: 0 4px;
+}
