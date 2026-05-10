@@ -1,15 +1,14 @@
+import "../css/inquiry.css";
+
 function FileUpload() {
   return (
-    <div>
-      <h4>파일 첨부</h4>
-      <label>
-        <div>
-          <div>
-            <span>파일 아아콘이든 이미지든</span>
-          </div>
-          <span>파일을 등록하세요</span>
-        </div>
-        <input type="file" multiple />
+    <div className="file-area">
+      <label className="form-label">파일 첨부</label>
+      <label className="drop-zone">
+        <span className="drop-txt">
+          파일을 드래그하거나 클릭하여 업로드하세요.
+        </span>
+        <input type="file" style={{ display: "none" }} multiple />
       </label>
       {/* file list 추가 예정 */}
     </div>

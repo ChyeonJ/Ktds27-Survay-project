@@ -1,7 +1,7 @@
 /* 전체 배경 및 레이아웃 */
 .inquiry-wrap {
   min-height: 100vh;
-  background-color: #1f2937; /* 어두운 배경 */
+  background-color: #ffffff; /* 어두운 배경 */
   display: flex;
   justify-content: center;
   align-items: center;

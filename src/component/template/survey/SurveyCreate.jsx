@@ -1,6 +1,7 @@
 import { useState } from "react";
 import UserInfo from "./userinfo/UserInfo";
 import FileUpload from "./fileupload/FileUpload";
+import "./css/inquiry.css";
 
 function SurveyCreate() {
   const [userInfo] = useState({
@@ -19,48 +20,61 @@ function SurveyCreate() {
   const [files, setFiles] = useState([]);
 
   return (
-    <div>
-      <div>
-        <h2>문의등록</h2>
+    <div className="inquiry-wrap">
+      <div className="inquiry-box">
+        <h2 className="main-title">문의등록</h2>
         <form>
           <UserInfo userInfo={userInfo} />
-          <h3>문의 내용 입력</h3>
-          <div>
-            <label></label>
-            <select name="category" value={null} onChange={null}>
+          <h3 className="sec-title">문의 내용 입력</h3>
+          <div className="form-group">
+            <label className="form-label">질문 분야</label>
+            <select
+              name="category"
+              value={null}
+              onChange={null}
+              className="form-select"
+            >
               <option value="">문의 유형 선택</option>
               <option value="1">분야1</option>
               <option value="2">분야2</option>
               <option value="3">분야3</option>
             </select>
           </div>
-          <div>
-            <label>제목</label>
+
+          <div className="form-group">
+            <label className="form-label">제목</label>
             <input
               type="text"
               name="title"
               value={null}
               onChange={null}
               placeholder="문의 제목을 입력해주세요"
+              className="form-input"
             />
           </div>
-          <div>
-            <label>내용</label>
+          <div className="form-group">
+            <label className="form-label">내용</label>
             <textarea
               name="content"
               value={null}
               onChange={null}
               placeholder="문의 내용을 입력해주세요"
+              className="form-textarea"
             />
           </div>
           <FileUpload />
-          <div>
-            <button type="button" onClick={() => alert("취소되었습니다.")}>
+          <div className="btn-area">
+            <button
+              type="button"
+              onClick={() => alert("취소되었습니다.")}
+              className="btn btn-cancel"
+            >
               취소
             </button>
             <button
               type="submit"
               onClick={() => alert("문의가 등록되었습니다.")}
+              className="btn btn-submit"
             >
               문의 등록
             </button>
