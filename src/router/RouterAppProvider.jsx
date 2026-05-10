@@ -1,19 +1,20 @@
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
-import {Layout} from "./Layout.jsx";
-import {Main} from "../component/template/Main.jsx";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Layout } from "./Layout.jsx";
+import { Main } from "../component/template/Main.jsx";
+import SurveyCreate from "../component/template/survey/SurveyCreate.jsx";
 
 export const RouterAppProvider = () => {
-    const router = createBrowserRouter([
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <Layout />,
+      children: [
         {
-            path: '/',
-            element: <Layout/>,
-            children: [
-                {
-                    path: '',
-                    element: <Main/>
-                }
-            ]
-        }
-    ])
-    return <RouterProvider router={router}/>
-}
+          path: "",
+          element: <Main />,
+        },
+      ],
+    },
+  ]);
+  return <RouterProvider router={router} />;
+};
