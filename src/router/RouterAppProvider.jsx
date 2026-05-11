@@ -14,6 +14,8 @@ export const RouterAppProvider = () => {
           path: "",
           element: <Main />,
         },
+        { path: "survey/create", element: <SurveyCreate /> },
+        { path: "survey/answer", element: <SurveyAnswer /> },
       ],
     },
   ]);

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./css/inquiryview.css";
 import AnswerDetail from "./answerdetail/AnswerDetail";
 import AnswerBox from "./answerbox/AnswerBox";
-import AnswerButton from "./answerbutton/AnswerButton";
+import FileUpload from "./fileupload/FileUpload";
 
 function SurveyAnswer() {
   const [userInfo] = useState({
@@ -46,7 +46,20 @@ function SurveyAnswer() {
         <h2 className="main-title">문의 답변 조회</h2>
         <AnswerDetail detail={userInfo} />
         <AnswerBox messages={messages} />
-        <AnswerButton />
+        <form className="reply-box">
+          <textarea
+            className="reply-textarea"
+            placeholder="답변 내용을 입력해주세요"
+            rows="4"
+          />
+
+          <div className="reply-footer">
+            <FileUpload files={[]} setFiles={null} mode="button" />
+            <button type="submit" className="btn-submit ml-2">
+              답변 등록
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );
