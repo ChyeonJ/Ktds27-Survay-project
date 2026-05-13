@@ -1,0 +1,9 @@
+package com.ktdsuniversity.edu.domain.file.web;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/file")
+public class FIleApiController {
+}

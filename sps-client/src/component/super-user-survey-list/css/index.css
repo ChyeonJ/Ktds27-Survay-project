@@ -1,0 +1,181 @@
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  background-color: #fff;
+  font-family: Arial, sans-serif;
+  color: #222;
+}
+
+/* 상단 전체 영역 */
+.top-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+/* 검색 영역 */
+.search-area {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 50px;
+}
+
+.filter-group,
+.date-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-group label,
+.date-group label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* 상태 select */
+.filter-group select {
+  width: 88px;
+  height: 34px;
+  padding: 0 14px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 설문명 검색 */
+.search-area input[type="text"] {
+  width: 232px;
+  height: 34px;
+  padding: 0 16px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.search-area input[type="text"]::placeholder {
+  color: #aaa;
+}
+
+/* 날짜 */
+.date-group input[type="date"] {
+  width: 150px;
+  height: 34px;
+  padding: 0 12px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #777;
+  box-sizing: border-box;
+}
+
+.date-group span {
+  font-size: 14px;
+  color: #333;
+}
+
+/* 버튼 영역 */
+.button-area {
+  display: flex;
+  gap: 14px;
+  margin-right: 38px;
+}
+
+.button-area button {
+  height: 36px;
+  padding: 0 22px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 새 설문 등록 버튼 */
+.register-button {
+  border: 1px solid #3f35f4;
+  background-color: #3f35f4;
+  color: #fff;
+}
+
+/* 엑셀 다운로드 버튼 */
+.excel-button {
+  border: 1px solid #5bcf75;
+  background-color: #fff;
+  color: #18a944;
+}
+
+/* 테이블 영역 */
+.table-area {
+  width: 100%;
+  height: 508px;
+  border: 1px solid #cfcfcf;
+  box-sizing: border-box;
+}
+
+/* 테이블 */
+.table-area table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+/* 테이블 헤더 */
+.table-area thead {
+  background-color: #eeeeee;
+}
+
+.table-area th {
+  height: 42px;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  color: #222;
+}
+
+/* 테이블 바디 */
+.table-area td {
+  height: 42px;
+  font-size: 13px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+/* 데이터 없을 때 */
+.empty-row {
+  height: 420px !important;
+  color: #777;
+  font-size: 14px;
+}
+
+/* 페이지네이션 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.pagination button {
+  border: none;
+  background: none;
+  font-size: 13px;
+  color: #222;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.pagination button.active {
+  color: red;
+}
+
+.pagination span {
+  font-size: 13px;
+  color: #222;
+}

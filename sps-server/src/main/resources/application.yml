@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: sps-server
+  datasource:
+    url: jdbc:oracle:thin:@20.41.124.28:1521:XE
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+    username: B_TEAM
+    password: B_TEAM
+  servlet:
+    multipart:
+      max-file-size: 150MB
+      max-request-size: 50MB
+
+mybatis:
+  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:com/ktdsuniversity/edu/**/mapper/*Mapper.xml

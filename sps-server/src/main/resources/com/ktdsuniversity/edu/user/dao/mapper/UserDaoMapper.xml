@@ -1,0 +1,29 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ktdsuniversity.edu.domain.user.dao.UserDao">
+    <!--int insertUser(RegistVO registVO);-->
+    <insert id="insertUser"
+            parameterType="com.ktdsuniversity.edu.domain.user.vo.request.RegistVO">
+        INSERT INTO B_TEAM."USER"
+        ( USR_ID
+        , USR_EMAIL
+        , USR_NAME
+        , USR_PASSWORD
+        , USR_COMPANY_NAME
+        , USR_REGIST_DATE
+        , USR_LATEST_PASSWORD_CHANGE_DATE
+        , FILE_GROUP_ID
+        , ENV_ROLE_ID)
+        VALUES
+        ( #{usrId})
+        , #{usrEmail}
+        , #{usrName}
+        , #{usrPassword}
+        , #{usrCompanyName}
+        , TO_CHAR(SYSDATE, 'YYYY-MM-DD')
+        , TO_CHAR(SYSDATE, 'YYYY-MM-DD')
+        , #{fileGroupId}
+        , #{envRoleId})
+    </insert>
+</mapper>

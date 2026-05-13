@@ -1,0 +1,117 @@
+.aside-active,
+.aside-disable {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 999;
+    transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+.aside-disable {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.aside-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+aside {
+    position: fixed;
+    top: 80px;
+    right: 0;
+    width: 300px;
+    height: calc(100vh - 80px);
+    background-color: #ffffff;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in-out;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+aside.open {
+    transform: translateX(0);
+}
+
+aside .aside-content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+aside .aside-content .menu-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+aside .aside-content .menu-group > a {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #333;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background 0.2s ease;
+}
+
+aside .aside-content .menu-group > a .arrow-img,
+aside .aside-content .menu-group > a .arrow-spacer {
+    width: 18px;
+    height: 18px;
+    margin-right: 12px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+aside .aside-content .menu-group .sub-menu-list {
+    display: grid;
+    grid-template-rows: 1fr;
+    background-color: #fcfcfc;
+    border-bottom: 1px solid #eee;
+    overflow: hidden;
+    animation: pushDownOpen 0.25s ease-in-out forwards;
+}
+
+aside .aside-content .menu-group .sub-menu-list .sub-item {
+    display: block;
+    padding: 12px 20px 12px 70px;
+    text-decoration: none;
+    color: #666;
+    font-size: 0.9rem;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+aside .aside-content .menu-group > a:hover,
+aside .aside-content .menu-group .sub-menu-list .sub-item:hover {
+    background-color: #f5f5f5;
+    color: #000;
+}
+
+@keyframes pushDownOpen {
+    0% {
+        grid-template-rows: 0fr;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        grid-template-rows: 1fr;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+aside .aside-content .menu-group > a span {
+    line-height: 1;
+}

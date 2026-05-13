@@ -1,0 +1,245 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  width: 46.875rem;
+  background: #fff;
+  border-radius: 0.75rem;
+  padding: 2.5rem;
+  box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+
+.signUpWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6rem;
+}
+
+.signUpForm {
+  display: flex;
+  width: 46.875rem;
+  background-color: #fff;
+}
+
+/* 왼쪽 로고 영역 */
+.signLogoSection,
+.logoSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-right: 0.0625rem solid #eee;
+}
+
+.signLogoSection {
+  padding-right: 3rem;
+}
+
+.logoSection {
+  padding-right: 1.25rem;
+}
+
+.mainLogo {
+  width: 11.25rem;
+  height: auto;
+  margin-bottom: 1.25rem;
+}
+
+.welcomeText {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 오른쪽 폼 영역 */
+.formSection {
+  flex: 3;
+  padding-left: 2.5rem;
+}
+
+.signFormSection {
+  flex: 4;
+  padding-left: 2.5rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1.875rem;
+  text-align: left;
+}
+
+.notFoundUser {
+  font-size: 1.25rem;
+  margin: 8rem 2rem;
+  text-align: center;
+  color: #0077b6;
+}
+
+.idResultWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.foundId {
+  font-size: 1rem;
+  margin: 0 2rem;
+  margin-top: 4rem;
+  text-align: center;
+  color: #0077b6;
+}
+
+.foundIdResult {
+  display: inline-block;
+  padding: 0.5rem 3rem;
+  font-size: 1rem;
+  background-color: #6d7db2;
+  margin: 0 2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  color: #fff;
+}
+
+.pwdResultWrapper {
+  margin: 3rem 0;
+}
+
+.foundPassword {
+  font-size: 1.25rem;
+  margin: 0.25rem 2rem;
+
+  text-align: center;
+  color: #0077b6;
+}
+
+.inputGroup {
+  margin-bottom: 0.9375rem;
+}
+
+.inputGroup > label {
+  display: block;
+  font-size: 0.875rem;
+  margin-bottom: 0.3125rem;
+  color: #666;
+}
+
+.inputGroup > input {
+  width: 100%;
+  padding: 0.625rem;
+  border: 0.0625rem solid #ccc;
+  border-radius: 0.9375rem;
+  background-color: white;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.25rem;
+}
+
+.signUpBtn,
+.loginBtn {
+  padding: 0.3125rem 1.5625rem;
+  border: 0.0938rem solid #6d7db2;
+  background: white;
+  color: #6d7db2;
+  border-radius: 0.9375rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.4s ease;
+}
+
+.signUpBtn:hover,
+.loginBtn:hover {
+  background-color: #bec4db;
+}
+
+.findLinks {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.9375rem;
+  font-size: 0.8125rem;
+  color: #444;
+  margin-top: 0.625rem;
+}
+
+.link {
+  text-decoration: none;
+  color: #444;
+  cursor: pointer;
+}
+
+.signupLink {
+  text-decoration: none;
+  color: #0077b6;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+/* 소셜 로그인 박스 */
+.socialBox {
+  margin-top: 2.5rem;
+  background-color: #c3d8e5;
+  border-radius: 0.75rem;
+  padding: 0.9375rem;
+  text-align: center;
+  box-shadow: inset 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
+}
+
+.socialTitle {
+  font-size: 0.8125rem;
+  margin-bottom: 0.625rem;
+  color: #333;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+}
+
+.socialIcon {
+  width: 2.8125rem;
+  height: 2.8125rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.socialIcon:hover {
+  transform: scale(1.1);
+}
+
+.footerText {
+  text-align: right;
+  margin-top: 0.9375rem;
+  font-size: 0.75rem;
+}
+
+.closeBtn {
+  position: absolute;
+  top: 0.9375rem;
+  right: 0.9375rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+}

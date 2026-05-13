@@ -1,0 +1,106 @@
+.inquiry-admin-page {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* 검색 영역 */
+
+.inquiry-search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 20px;
+  margin-bottom: 24px;
+
+  border: 1px solid #dcdcdc;
+  border-radius: 10px;
+
+  background-color: #ffffff;
+}
+
+.inquiry-search-box select,
+.inquiry-search-box input {
+  height: 40px;
+  padding: 0 12px;
+
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+
+  outline: none;
+}
+
+.inquiry-search-box input {
+  width: 220px;
+}
+
+.inquiry-search-box button {
+  height: 40px;
+  padding: 0 18px;
+
+  border: none;
+  border-radius: 6px;
+
+  background-color: #2f6fed;
+  color: white;
+
+  cursor: pointer;
+}
+
+/* 테이블 */
+
+.inquiry-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  background-color: white;
+}
+
+.inquiry-table thead {
+  background-color: #f3f5f7;
+}
+
+.inquiry-table th {
+  padding: 14px 10px;
+
+  border-top: 2px solid #dcdcdc;
+  border-bottom: 1px solid #dcdcdc;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-align: center;
+}
+
+.inquiry-table td {
+  padding: 14px 10px;
+
+  border-bottom: 1px solid #ececec;
+
+  text-align: center;
+  font-size: 14px;
+}
+
+.inquiry-table tbody tr:hover {
+  background-color: #fafafa;
+}
+
+/* 상태 */
+
+.wait-row {
+  color: red;
+}
+
+.complete-status {
+  color: #222;
+  font-weight: 600;
+}
+
+/* 제목 */
+
+.inquiry-title {
+  text-align: left;
+  cursor: pointer;
+}

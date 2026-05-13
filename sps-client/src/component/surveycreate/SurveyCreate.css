@@ -1,0 +1,306 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f5f6f8;
+  color: #333;
+  font-size: 14px;
+}
+span {
+  margin: 0;
+}
+
+/* ── 페이지 ── */
+.create-page {
+  max-width: 860px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ── 상단 헤더 ── */
+.create-header {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.header-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 0 20px;
+}
+.header-field > .btn {
+  background-color: #4a6cf7;
+  color: #fff;
+}
+
+.header-field:first-child {
+  padding-left: 0;
+}
+
+.header-divider {
+  width: 1px;
+  height: 40px;
+  background: #ddd;
+}
+
+.field-label {
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+}
+
+.field-input {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 13px;
+  color: #333;
+}
+
+.field-select {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 13px;
+  color: #333;
+  background: #fff;
+}
+
+.date-range {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.date-input {
+  width: 130px;
+}
+
+.date-separator {
+  color: #888;
+  font-size: 13px;
+}
+
+/* ── 문항 구성 영역 ── */
+.question-section {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px 24px;
+}
+
+.question-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.question-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* ── 문항 카드 ── */
+.question-item {
+  display: flex;
+  gap: 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.question-num {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  background: #4a6cf7;
+  font-size: 13px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.question-body {
+  flex: 1;
+  padding: 12px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.question-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.type-select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 12px;
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.question-text-input {
+  flex: 1;
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding: 5px 4px;
+  font-size: 13px;
+  color: #333;
+}
+
+.question-text-input:focus {
+  outline: none;
+  border-bottom-color: #4a6cf7;
+}
+
+.question-actions {
+  display: flex;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+/* ── 유형별 서브 옵션 ── */
+.question-sub {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.answer-textarea {
+  width: 80%;
+  height: 100px;
+}
+
+.sub-field {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sub-label {
+  font-size: 11px;
+  color: #888;
+}
+
+.sub-select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 12px;
+  background: #fff;
+}
+
+.sub-input {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 8px;
+  font-size: 12px;
+  color: #333;
+  flex-direction: row;
+}
+
+.scale-name-input {
+  width: 220px;
+}
+
+.options-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.option-input {
+  width: 90px;
+  margin: 0 0 10px 10px;
+}
+
+/* ── 하단 버튼 ── */
+.create-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+/* ── 공통 버튼 ── */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 16px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  border: 1px solid;
+}
+.btn-add {
+  background: #eef2ff;
+  color: #4a6cf7;
+  border-color: #4a6cf7;
+}
+
+.btn-edit {
+  background: #fff;
+  color: #555;
+  border-color: #ccc;
+}
+
+.btn-delete {
+  background: #fff;
+  color: #e53e3e;
+  border-color: #e53e3e;
+}
+
+.btn-option-add {
+  background: #fff;
+  color: #4a6cf7;
+  border-color: #4a6cf7;
+  font-size: 12px;
+  padding: 5px 10px;
+}
+.btn-option-delete {
+  background-color: #e53e3e;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  margin: 10px;
+  padding: 0 5px;
+}
+
+.btn-cancel {
+  background: #fff;
+  color: #555;
+  border-color: #ccc;
+  padding: 9px 28px;
+}
+
+.btn-save {
+  background: #4a6cf7;
+  color: #fff;
+  padding: 9px 28px;
+}
+.btn:hover {
+  opacity: 0.85;
+}

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ktdsuniversity.edu.questions.dao.QuestionsDao">
+
+	<insert id="insertNewQuestion" parameterType="com.ktdsuniversity.edu.questions.vo.QuestionsWriteVO">
+		<selectKey order="BEFORE"
+				   resultType="string"
+				   keyProperty="qnaId" >
+			SELECT 'QA-' || TO_CHAR(SYSDATE, 'YYYYMMDD-') || LPAD(SEQ_QNA_PK.NEXTVAL, 6, '0')
+			  FROM DUAL
+		</selectKey>
+		INSERT INTO B_TEAM.QUESTIONS (
+			    QNA_ID
+			  , QNA_STATE
+			  , QNA_CREATE_DATE
+			  , QNA_UPDATE_DATE
+			  , QNA_TITLE
+			  , QNA_CONTENT
+			  , QNA_NAME
+			  , QNA_COMPANY
+			  , QNA_ENVNAME
+			  , USR_ID
+			  , FILE_GROUP_ID
+			  , ENV_ID
+			) VALUES (
+			    #{qnaId}
+			  , 'N'
+			  , SYSDATE
+			  , NULL
+			  , #{qnaTitle}
+			  , #{qnaContent}
+			  , '김*당'
+			  , '가나다라마바사 (주)'
+			  , '계정 관련'
+			  , '성'
+			  , '성'
+			  , '성'
+			)
+	</insert>
+
+	<select id="selectQuestionById" 
+        parameterType="string" 
+        resultType="com.ktdsuniversity.edu.questions.vo.QuestionsVO">
+    SELECT QNA_ID
+         , QNA_STATE
+         , TO_CHAR(QNA_CREATE_DATE, 'YYYY-MM-DD HH24:MI:SS') AS QNA_CREATE_DATE
+         , TO_CHAR(QNA_UPDATE_DATE, 'YYYY-MM-DD HH24:MI:SS') AS QNA_UPDATE_DATE
+         , QNA_TITLE
+         , QNA_CONTENT
+         , QNA_NAME
+         , QNA_COMPANY
+         , QNA_ENVNAME
+         , USR_ID
+         , FILE_GROUP_ID
+         , ENV_ID
+      FROM B_TEAM.QUESTIONS
+     WHERE QNA_ID = #{_parameter}
+</select>
+
+</mapper>
